@@ -18,8 +18,8 @@ oauth.register(
     client_kwargs={'scope': 'openid profile email'},
 )
 
-@app.route('/prueba', methods=['GET'])
-def get_prueba():
+@app.route('/pruebas', methods=['GET'])
+def get_pruebas():
     token = oauth.keycloak.authorize_access_token()
     if not token:
         return jsonify({"error": "Acceso no autorizado"}), 401
